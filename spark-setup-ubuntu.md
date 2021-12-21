@@ -13,7 +13,7 @@ nano ~/.bashrc
 
 source ~/.bashrc
 
-start-master.sh 
+start-master.sh or start-master.sh --port 7072 --webui-port 8082
 
 sudo ss -tunelp | grep 8080
 
@@ -29,8 +29,14 @@ locate start-slave.sh
 
 Shuddown
 
-SPARK_HOME/sbin/stop-slave.sh
+stop-slave.sh
 
-SPARK_HOME/sbin/stop-master.sh
+stop-master.sh 
+
+stop-all.sh
+
+start-all.sh
+
+
 
 
