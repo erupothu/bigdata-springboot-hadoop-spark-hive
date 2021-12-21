@@ -19,6 +19,9 @@ sudo ss -tunelp | grep 8080
 
 http://localhost:8080/
 
+start-slave.sh spark://0.0.0.0:8082 or
+start-slave.sh spark://localhost:8082
+or
 start-slave.sh spark://ubuntu:7077
 
 sudo updatedb
