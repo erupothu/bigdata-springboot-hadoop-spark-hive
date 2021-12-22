@@ -44,4 +44,5 @@ Big Data and ETLs
 #### Editing Tool
 * __zeppelin__
 * __Jyputer__
+* __spark-notebook__
 
