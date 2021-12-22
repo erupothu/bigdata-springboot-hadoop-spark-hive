@@ -1,0 +1,53 @@
+version: '2' 
+services:
+  mysql:
+  image: mysql
+  container_name: mysql
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+
+  zookeeper:
+    image: stratio/zookeeper:3.4.6
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: stratio/kafka:0.8.2.1
+    container_name: kafka
+    ports:
+      - "9092:9092"
+    links:
+      - waitzk
+      - zookeeper
+    environment:
+      ZOOKEEPER_HOSTS: zookeeper:2181
+      
+  sqoop-server:
+    image: stratio/sqoop-server:latest
+    container_name: sqoopserver
+    ports:
+      - "8080:8080"
+    links:
+      - zookeeper
+      - mysql
+      - kafka
+      - waitkafka
+      - postgres
+
+  sqoop-shell:
+    image: stratio/sqoop-shell:latest
+    container_name: sqoopshell
+    links:
+      - sqoop-server
