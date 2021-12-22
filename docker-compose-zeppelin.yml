@@ -1,0 +1,9 @@
+version: '2' 
+services:
+  zeppelin:
+    image: openkbs/docker-spark-bde2020-zeppelin
+    container_name: zeppelin
+    environment:
+      - ./hadoop-hive.env
+    ports:
+      - 19090:8080
