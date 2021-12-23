@@ -6,6 +6,9 @@ Big Data and ETLs
  * Databases:
   * MySQL:
   * Postgres:
+  * Cassandra
+  * CouchDB
+  * DynamoDB
   * HBase
   * MongoDB
   * CSV, XLSX, Text
