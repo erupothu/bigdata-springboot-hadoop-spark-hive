@@ -3,15 +3,13 @@ Big Data and ETLs
 
 #### Big Data Ingestion Layer
 * This layer of Big Data Architecture is the first step for the data coming from variable sources to start its journey. Data ingestion means the data is prioritized and categorized, making data flow smoothly in further layers in the Data ingestion process flow.
-* __Big Data Processing Tools__:
-  * __Apache Sqoop__
-    * It efficiently transfers bulk data between Apache Hadoop and structured datastores such as relational databases. Apache Sqoop can also extract data from Hadoop and export it into external structured data stores.
-  * __Apache Storm__
-    * It is a system for processing streaming data in real-time during Data ingestion. It adds reliable real-time data processing capabilities to Enterprise Hadoop. Storm on YARN is powerful for scenarios requiring real-time analytics, machine learning, and continuous monitoring of operations.
-  * __Apache Spark__
-    * Apache Spark Optimization is a fast, in-memory data processing engine with elegant and expressive development APIs to allow data workers to efficiently execute streaming, machine learning, or SQL workloads that require fast iterative access to data sets.
-  * __Apache Flink__
-    * Apache Flink is an open-source framework in the Data ingestion pipeline for distributed stream processing that provides accurate results, even in out-of-order or late-arriving data or Distributed Data Processing Apache Flink.
+ * Databases:
+  * MySQL:
+  * Postgres:
+  * HBase
+  * MongoDB
+  * CSV, XLSX, Text
+
 
 #### Data Collector Layer
 * In this Layer, more focus is on the transportation of data from the ingestion layer to the rest of the data pipeline. It is the Layer of data architecture where components are decoupled so that analytic capabilities may begin.
@@ -23,6 +21,15 @@ Big Data and ETLs
 
 #### Data Processing Layer
 * In this primary layer of Big Data Architecture, the focus is to specialize in the data pipeline processing system. We can say the data we have collected in the previous layer is processed in this layer. Here we do some magic with the data to route them to a different destination and classify the data flow, and it’s the first point where the analytic may occur.
+ * __Big Data Processing Tools__:
+  * __Apache Sqoop__
+    * It efficiently transfers bulk data between Apache Hadoop and structured datastores such as relational databases. Apache Sqoop can also extract data from Hadoop and export it into external structured data stores.
+  * __Apache Storm__
+    * It is a system for processing streaming data in real-time during Data ingestion. It adds reliable real-time data processing capabilities to Enterprise Hadoop. Storm on YARN is powerful for scenarios requiring real-time analytics, machine learning, and continuous monitoring of operations.
+  * __Apache Spark__
+    * Apache Spark Optimization is a fast, in-memory data processing engine with elegant and expressive development APIs to allow data workers to efficiently execute streaming, machine learning, or SQL workloads that require fast iterative access to data sets.
+  * __Apache Flink__
+    * Apache Flink is an open-source framework in the Data ingestion pipeline for distributed stream processing that provides accurate results, even in out-of-order or late-arriving data or Distributed Data Processing Apache Flink.
 
 #### Data Storage Layer
 * Storage becomes a challenge when the size of the data you are dealing with becomes large. Several possible solutions, like Data Ingestion Patterns, can rescue from such problems. Finding a storage solution is very much important when the size of your data becomes large. This layer of Big Data Architecture focuses on “where to store such large data efficiently.”
